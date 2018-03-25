@@ -43,7 +43,7 @@
           <div class="card-header">Doing</div>
           <div class="card-body">
             <div class="card text-white bg-dark mb-3" style="max-width: 18rem;"  v-for="(data,i) in tasks" v-bind:key="i" v-if="data.status === 'doing'">
-              <div class="card-header">Header</div>
+              <div class="card-header">{{data.title}}</div>
               <div class="card-body">
                 <p class="card-title">Point: {{data.point}}</p>
                 <p class="card-text">Assigned To: {{data.assigned}}</p>
@@ -62,7 +62,7 @@
           <div class="card-header">Done</div>
           <div class="card-body">
             <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" v-for="(data,i) in tasks" v-bind:key="i" v-if="data.status === 'done'">
-              <div class="card-header">Header</div>
+              <div class="card-header">{{data.title}}</div>
               <div class="card-body">
                 <p class="card-title">Point: {{data.point}}</p>
                 <p class="card-text">Assigned To: {{data.assigned}}</p>
